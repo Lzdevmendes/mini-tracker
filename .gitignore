@@ -1,0 +1,23 @@
+# Back-end (Java / Maven / SQLite)
+backend/target/
+backend/*.db
+backend/*.db-shm
+backend/*.db-wal
+backend/*.sqlite
+backend/*.sqlite-shm
+backend/*.sqlite-wal
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Front-end (React / Vite / Node)
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+*.tsbuildinfo
+
+# IDEs & OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
