@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: foody-mini-tracker-backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - sqlite_data:/data
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/data/minitracker.db
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: foody-mini-tracker-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8080/api
+    depends_on:
+      - backend
+
+volumes:
+  sqlite_data:
